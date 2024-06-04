@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\BlogApp.DataAccess\bin\Debug\net6.0\BlogApp.DataAccess.deps.json
+C:\Users\user\source\repos\BlogApp.DataAccess\bin\Debug\net6.0\BlogApp.DataAccess.dll
+C:\Users\user\source\repos\BlogApp.DataAccess\bin\Debug\net6.0\BlogApp.DataAccess.pdb
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\BlogApp.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\BlogApp.DataAccess.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\BlogApp.DataAccess.AssemblyInfo.cs
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\BlogApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\BlogApp.DataAccess.dll
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\refint\BlogApp.DataAccess.dll
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\BlogApp.DataAccess.pdb
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\ref\BlogApp.DataAccess.dll
+C:\Users\user\source\repos\BlogApp.DataAccess\bin\Debug\net6.0\BlogApp.Models.dll
+C:\Users\user\source\repos\BlogApp.DataAccess\bin\Debug\net6.0\BlogApp.Models.pdb
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\BlogApp.DataAccess.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\BlogApp.DataAccess\obj\Debug\net6.0\BlogApp.DataAccess.csproj.CopyComplete

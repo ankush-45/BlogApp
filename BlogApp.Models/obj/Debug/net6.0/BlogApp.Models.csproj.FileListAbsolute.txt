@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\BlogApp.Models\bin\Debug\net6.0\BlogApp.Models.deps.json
+C:\Users\user\source\repos\BlogApp.Models\bin\Debug\net6.0\BlogApp.Models.dll
+C:\Users\user\source\repos\BlogApp.Models\bin\Debug\net6.0\BlogApp.Models.pdb
+C:\Users\user\source\repos\BlogApp.Models\obj\Debug\net6.0\BlogApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\BlogApp.Models\obj\Debug\net6.0\BlogApp.Models.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\BlogApp.Models\obj\Debug\net6.0\BlogApp.Models.AssemblyInfo.cs
+C:\Users\user\source\repos\BlogApp.Models\obj\Debug\net6.0\BlogApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\BlogApp.Models\obj\Debug\net6.0\BlogApp.Models.dll
+C:\Users\user\source\repos\BlogApp.Models\obj\Debug\net6.0\refint\BlogApp.Models.dll
+C:\Users\user\source\repos\BlogApp.Models\obj\Debug\net6.0\BlogApp.Models.pdb
+C:\Users\user\source\repos\BlogApp.Models\obj\Debug\net6.0\ref\BlogApp.Models.dll
