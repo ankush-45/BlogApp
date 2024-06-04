@@ -1,0 +1,352 @@
+2024-06-04 18:39:31.010 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 18:39:31.231 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 18:39:31.239 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 18:39:31.241 +05:30 [INF] Hosting environment: Development
+2024-06-04 18:39:31.243 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 18:39:33.559 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 18:39:36.445 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 2899.0095ms
+2024-06-04 18:39:36.493 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 18:39:36.501 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 18:39:36.525 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 24.0793ms
+2024-06-04 18:39:36.679 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 186.1466ms
+2024-06-04 18:39:36.959 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 18:40:28.176 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 18:40:28.342 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 18:40:28.351 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 18:40:28.355 +05:30 [INF] Hosting environment: Development
+2024-06-04 18:40:28.359 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 18:40:29.920 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 18:40:31.002 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 18:40:31.003 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 18:40:31.055 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 1139.2955ms
+2024-06-04 18:40:31.057 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 55.3620ms
+2024-06-04 18:40:31.180 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 176.5973ms
+2024-06-04 18:40:31.437 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 18:40:31.891 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 453.8450ms
+2024-06-04 18:41:00.231 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPosts/3 - -
+2024-06-04 18:41:00.250 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-04 18:41:00.262 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostsByAuthor (BlogApp.API)'
+2024-06-04 18:41:00.346 +05:30 [INF] Route matched with {action = "GetPostsByAuthor", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostsByAuthor(Int32) on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 18:41:00.989 +05:30 [INF] Getting posts by author with ID 3
+2024-06-04 18:41:03.491 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 18:41:05.609 +05:30 [INF] Executed DbCommand (161ms) [Parameters=[@__authorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[AuthorId], [p].[CategoryId], [p].[Content], [p].[Title]
+FROM [Posts] AS [p]
+WHERE [p].[AuthorId] = @__authorId_0
+2024-06-04 18:41:05.826 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.Post, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 18:41:05.852 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostsByAuthor (BlogApp.API) in 5492.069ms
+2024-06-04 18:41:05.857 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostsByAuthor (BlogApp.API)'
+2024-06-04 18:41:05.875 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPosts/3 - - - 200 - application/json;+charset=utf-8 5646.6187ms
+2024-06-04 18:57:17.799 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 18:57:17.921 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 18:57:17.930 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 18:57:17.935 +05:30 [INF] Hosting environment: Development
+2024-06-04 18:57:17.937 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 18:57:20.282 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 18:57:21.998 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 18:57:22.042 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 1760.4548ms
+2024-06-04 18:57:22.065 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 18:57:22.119 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 121.5484ms
+2024-06-04 18:57:22.216 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 151.0941ms
+2024-06-04 18:57:22.393 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 18:57:22.777 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 384.2127ms
+2024-06-04 20:29:49.340 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 20:29:49.479 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 20:29:49.489 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 20:29:49.503 +05:30 [INF] Hosting environment: Development
+2024-06-04 20:29:49.510 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 20:29:52.886 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 20:29:55.037 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 20:29:55.066 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 2191.9880ms
+2024-06-04 20:29:55.070 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 33.1275ms
+2024-06-04 20:29:55.120 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 20:29:55.309 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 188.9712ms
+2024-06-04 20:29:55.614 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 20:29:55.960 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 346.0761ms
+2024-06-04 21:02:06.307 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 21:02:06.427 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 21:02:06.434 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 21:02:06.437 +05:30 [INF] Hosting environment: Development
+2024-06-04 21:02:06.439 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 21:02:08.254 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 21:02:09.198 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 21:02:09.209 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 21:02:09.224 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 22.1336ms
+2024-06-04 21:02:09.226 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 983.7691ms
+2024-06-04 21:02:09.321 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 111.9478ms
+2024-06-04 21:02:09.530 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 21:02:09.934 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 403.9206ms
+2024-06-04 21:02:21.557 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 21:02:21.612 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-04 21:02:21.633 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategory (BlogApp.API)'
+2024-06-04 21:02:21.694 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategory() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 21:02:22.343 +05:30 [INF] Getting Post count with Category
+2024-06-04 21:02:24.313 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 21:02:26.462 +05:30 [INF] Executed DbCommand (174ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 21:02:26.595 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 21:02:26.622 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategory (BlogApp.API) in 4912.1716ms
+2024-06-04 21:02:26.630 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategory (BlogApp.API)'
+2024-06-04 21:02:26.658 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 5101.0384ms
+2024-06-04 21:14:56.933 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 21:14:57.039 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 21:14:57.048 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 21:14:57.050 +05:30 [INF] Hosting environment: Development
+2024-06-04 21:14:57.052 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 21:14:58.866 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 21:15:00.196 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 1305.0239ms
+2024-06-04 21:15:00.202 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 21:15:00.202 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 21:15:00.254 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 51.3805ms
+2024-06-04 21:15:00.405 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 202.9247ms
+2024-06-04 21:15:00.647 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 21:15:01.138 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 491.2750ms
+2024-06-04 21:15:35.913 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 21:15:36.237 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 21:15:36.706 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 21:15:36.727 +05:30 [INF] Hosting environment: Development
+2024-06-04 21:15:36.730 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 21:15:38.795 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 21:15:40.339 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 1553.9251ms
+2024-06-04 21:15:40.414 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 21:15:40.414 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 21:15:40.480 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 66.0912ms
+2024-06-04 21:15:40.543 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 128.5405ms
+2024-06-04 21:15:40.800 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 21:15:41.224 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 423.5921ms
+2024-06-04 21:17:44.891 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 21:17:45.099 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 21:17:45.120 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 21:17:45.129 +05:30 [INF] Hosting environment: Development
+2024-06-04 21:17:45.253 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 21:17:46.604 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 21:17:48.483 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 21:17:48.575 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 2017.5126ms
+2024-06-04 21:17:48.611 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 21:17:48.691 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 79.7841ms
+2024-06-04 21:17:48.728 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 245.8136ms
+2024-06-04 21:17:48.957 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 21:17:49.428 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 470.6024ms
+2024-06-04 21:18:33.688 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:7017/api/Posts/insertPost application/json 81
+2024-06-04 21:18:33.722 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-04 21:18:33.738 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.InsertPostAsync (BlogApp.API)'
+2024-06-04 21:18:33.813 +05:30 [INF] Route matched with {action = "InsertPost", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertPostAsync(BlogApp.Models.Post) on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 21:18:34.345 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-06-04 21:18:34.371 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.InsertPostAsync (BlogApp.API) in 544.6227ms
+2024-06-04 21:18:34.384 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.InsertPostAsync (BlogApp.API)'
+2024-06-04 21:18:34.399 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:7017/api/Posts/insertPost application/json 81 - 400 - application/problem+json;+charset=utf-8 711.8205ms
+2024-06-04 22:31:29.441 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 22:31:29.594 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 22:31:29.606 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 22:31:29.607 +05:30 [INF] Hosting environment: Development
+2024-06-04 22:31:29.609 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 22:31:31.467 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 22:31:33.013 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 22:31:33.027 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 22:31:33.052 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 37.0778ms
+2024-06-04 22:31:33.054 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 1595.4167ms
+2024-06-04 22:31:33.254 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 227.4574ms
+2024-06-04 22:31:33.863 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 22:31:34.162 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 299.6819ms
+2024-06-04 22:31:51.137 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:31:51.182 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-04 22:31:51.198 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:31:51.246 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:31:51.721 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:31:53.319 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:31:55.565 +05:30 [INF] Executed DbCommand (86ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:31:55.712 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:31:55.729 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 4473.5557ms
+2024-06-04 22:31:55.739 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:31:55.768 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 4630.2848ms
+2024-06-04 22:38:21.809 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:21.864 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:21.867 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:21.873 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:21.889 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:21.959 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:21.972 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:21.979 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 106.8226ms
+2024-06-04 22:38:21.987 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:21.993 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 184.3979ms
+2024-06-04 22:38:24.126 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:24.136 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:24.141 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:24.167 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:24.254 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:24.281 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:24.290 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:24.299 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 134.5556ms
+2024-06-04 22:38:24.312 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:24.317 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 190.5432ms
+2024-06-04 22:38:25.180 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:25.184 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:25.192 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:25.199 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:25.209 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:25.234 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:25.241 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:25.245 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 45.8139ms
+2024-06-04 22:38:25.249 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:25.256 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 75.4517ms
+2024-06-04 22:38:29.425 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:29.438 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:29.442 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:29.462 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:29.472 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:29.505 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:29.512 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:29.520 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 57.7958ms
+2024-06-04 22:38:29.527 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:29.535 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 107.5614ms
+2024-06-04 22:38:30.386 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:30.395 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:30.408 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:30.424 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:30.429 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:30.453 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:30.460 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:30.469 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 45.1855ms
+2024-06-04 22:38:30.474 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:30.477 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 90.6778ms
+2024-06-04 22:38:30.731 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:30.746 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:30.759 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:30.769 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:30.774 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:30.784 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:30.794 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:30.799 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 29.6625ms
+2024-06-04 22:38:30.806 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:30.810 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 78.3739ms
+2024-06-04 22:38:31.887 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:31.890 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:31.896 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:31.920 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:31.923 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:31.940 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:31.954 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:31.968 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 48.8885ms
+2024-06-04 22:38:31.985 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:31.988 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 101.1367ms
+2024-06-04 22:38:32.226 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:32.235 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:32.244 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:32.256 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:32.259 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:32.272 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:32.280 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:32.288 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 31.8747ms
+2024-06-04 22:38:32.294 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:32.297 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 71.1795ms
+2024-06-04 22:38:39.323 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:39.337 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:39.349 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:39.360 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:39.368 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:39.384 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:39.397 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:39.401 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 44.0007ms
+2024-06-04 22:38:39.415 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:39.418 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 94.4962ms
+2024-06-04 22:38:40.363 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:38:40.380 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:40.383 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:38:40.396 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:38:40.400 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:38:40.415 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+GROUP BY [p].[CategoryId]
+2024-06-04 22:38:40.428 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:38:40.433 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 37.2742ms
+2024-06-04 22:38:40.444 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:38:40.447 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 84.1439ms
+2024-06-04 22:41:53.774 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 22:41:53.955 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 22:41:53.967 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 22:41:53.970 +05:30 [INF] Hosting environment: Development
+2024-06-04 22:41:53.972 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 22:41:55.752 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 22:41:56.802 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 22:41:56.830 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 22:41:56.841 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 1094.2058ms
+2024-06-04 22:41:56.851 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 49.5057ms
+2024-06-04 22:41:56.985 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 154.2370ms
+2024-06-04 22:41:57.165 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 22:41:57.528 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 363.0286ms
+2024-06-04 22:42:03.945 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - -
+2024-06-04 22:42:03.975 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-04 22:42:03.995 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:42:04.061 +05:30 [INF] Route matched with {action = "GetPostCountInCategory", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPostCountInCategoryAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 22:42:04.745 +05:30 [INF] Getting Post count with Category
+2024-06-04 22:42:06.735 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 22:42:08.708 +05:30 [INF] Executed DbCommand (111ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CategoryId], [c].[Name] AS [CategoryName], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+GROUP BY [p].[CategoryId], [c].[Name]
+2024-06-04 22:42:08.869 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 22:42:08.892 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API) in 4818.4758ms
+2024-06-04 22:42:08.902 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetPostCountInCategoryAsync (BlogApp.API)'
+2024-06-04 22:42:08.927 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getPostCountWithCategory - - - 200 - application/json;+charset=utf-8 4981.9126ms
+2024-06-04 23:19:49.822 +05:30 [INF] Now listening on: http://localhost:7017
+2024-06-04 23:19:49.988 +05:30 [INF] Now listening on: http://localhost:5135
+2024-06-04 23:19:49.999 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-04 23:19:50.001 +05:30 [INF] Hosting environment: Development
+2024-06-04 23:19:50.003 +05:30 [INF] Content root path: C:\Users\user\source\repos\BlogApp.API\
+2024-06-04 23:19:51.825 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/index.html - -
+2024-06-04 23:19:53.108 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/index.html - - - 200 - text/html;charset=utf-8 1296.6069ms
+2024-06-04 23:19:53.118 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_vs/browserLink - -
+2024-06-04 23:19:53.140 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - -
+2024-06-04 23:19:53.203 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 62.7054ms
+2024-06-04 23:19:53.291 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 173.3979ms
+2024-06-04 23:19:53.551 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - -
+2024-06-04 23:19:54.027 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 476.2473ms
+2024-06-04 23:20:07.742 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:7017/api/Posts/getCategoryPostsCount - -
+2024-06-04 23:20:07.777 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-04 23:20:07.802 +05:30 [INF] Executing endpoint 'BlogApp.API.Controllers.PostsController.GetCategoryPostCoutsAsync (BlogApp.API)'
+2024-06-04 23:20:07.861 +05:30 [INF] Route matched with {action = "GetCategoryPostCouts", controller = "Posts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCategoryPostCoutsAsync() on controller BlogApp.API.Controllers.PostsController (BlogApp.API).
+2024-06-04 23:20:08.360 +05:30 [INF] Getting Post count with Category
+2024-06-04 23:20:10.104 +05:30 [INF] Entity Framework Core 6.0.31 initialized 'BlogAppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.31' with options: None
+2024-06-04 23:20:13.072 +05:30 [INF] Executed DbCommand (150ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Name] AS [Category], COUNT(*) AS [PostCount]
+FROM [Posts] AS [p]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+GROUP BY [p].[CategoryId], [c].[Name]
+2024-06-04 23:20:13.239 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Models.ViewModels.CategoryPostCountVM, BlogApp.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-04 23:20:13.264 +05:30 [INF] Executed action BlogApp.API.Controllers.PostsController.GetCategoryPostCoutsAsync (BlogApp.API) in 5384.8742ms
+2024-06-04 23:20:13.276 +05:30 [INF] Executed endpoint 'BlogApp.API.Controllers.PostsController.GetCategoryPostCoutsAsync (BlogApp.API)'
+2024-06-04 23:20:13.303 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:7017/api/Posts/getCategoryPostsCount - - - 200 - application/json;+charset=utf-8 5560.4168ms
