@@ -43,5 +43,5 @@ jobs:
             $publishPath = "C:\inetpub\wwwroot\BlogApp"  # Path on the server where the app will be deployed
             Remove-Item -Recurse -Force $publishPath # Remove existing files
             Copy-Item -Path D:\publish/* -Destination $publishPath -Recurse
-        }
+        } 
 
