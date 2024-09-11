@@ -17,7 +17,6 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-    # Navigate to BlogApp.API directory for restoring, building, and testing
     - name: Restore dependencies
       run: dotnet restore
       working-directory: BlogApp.API
