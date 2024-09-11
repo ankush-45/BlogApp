@@ -69,3 +69,4 @@ jobs:
                 Write-Error "Publish source path $publishSourcePath does not exist."
             }
         }
+ 
