@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -26,22 +25,38 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
       working-directory: BlogApp.API
-      
+
     - name: Publish
-      run: dotnet publish --configuration Release --output D:\publish
+      run: dotnet publish --configuration Release --output ${{ github.workspace }}/publish
       working-directory: BlogApp.API
 
   deploy:
     runs-on: windows-latest  # Use GitHub's Windows runner
+    needs: build  # Ensure this job runs after the build job
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-    - name: Deploy to IIS via Web Deploy
+    - name: Deploy to IIS via PowerShell
       run: |
         echo "Deploying to IIS..."
         powershell -Command {
             $publishPath = "C:\inetpub\wwwroot\BlogApp"  # Path on the server where the app will be deployed
-            Remove-Item -Recurse -Force $publishPath # Remove existing files
-            Copy-Item -Path D:\publish/* -Destination $publishPath -Recurse
-        }  
+            $publishSourcePath = "${{ github.workspace }}\publish"  # Path where the app is published
 
+            # Ensure the target directory exists, if not create it
+            if (-Not (Test-Path -Path $publishPath)) {
+                New-Item -Path $publishPath -ItemType Directory
+            } else {
+                # If the directory exists, clear existing files
+                Remove-Item -Recurse -Force $publishPath\*
+            }
+
+            # Ensure the source directory exists
+            if (Test-Path -Path $publishSourcePath) {
+                # Copy the new published files
+                Copy-Item -Path "$publishSourcePath\*" -Destination $publishPath -Recurse
+            } else {
+                Write-Error "Publish source path $publishSourcePath does not exist."
+            }
+        }
