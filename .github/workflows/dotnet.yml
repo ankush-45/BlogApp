@@ -26,5 +26,8 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
       working-directory: BlogApp.API
-
+      
+    - name: Publish
+      run: dotnet publish --configuration Release --output ./publish
+      working-directory: BlogApp.API
   
