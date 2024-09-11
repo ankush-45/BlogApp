@@ -36,12 +36,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: Print directory contents
+      run: |
+        dir ${{ github.workspace }}\publish
+
     - name: Deploy to IIS via PowerShell
       run: |
         echo "Deploying to IIS..."
         powershell -Command {
             $publishPath = "C:\inetpub\wwwroot\BlogApp"  # Path on the server where the app will be deployed
             $publishSourcePath = "${{ github.workspace }}\publish"  # Path where the app is published
+
+            # Print the contents of the source directory for debugging
+            Write-Host "Publish Source Path: $publishSourcePath"
+            Write-Host "Publishing to Path: $publishPath"
 
             # Ensure the target directory exists, if not create it
             if (-Not (Test-Path -Path $publishPath)) {
@@ -53,6 +61,8 @@ jobs:
 
             # Ensure the source directory exists
             if (Test-Path -Path $publishSourcePath) {
+                # Print contents for debugging
+                Get-ChildItem -Path $publishSourcePath | Write-Host
                 # Copy the new published files
                 Copy-Item -Path "$publishSourcePath\*" -Destination $publishPath -Recurse
             } else {
