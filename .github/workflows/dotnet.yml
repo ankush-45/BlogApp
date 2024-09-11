@@ -28,7 +28,7 @@ jobs:
       working-directory: BlogApp.API
       
     - name: Publish
-      run: dotnet publish --configuration Release --output ./publish
+      run: dotnet publish --configuration Release --output D:\publish
       working-directory: BlogApp.API
 
   deploy:
@@ -42,6 +42,6 @@ jobs:
         powershell -Command {
             $publishPath = "C:\inetpub\wwwroot\BlogApp"  # Path on the server where the app will be deployed
             Remove-Item -Recurse -Force $publishPath # Remove existing files
-            Copy-Item -Path ./publish/* -Destination $publishPath -Recurse
+            Copy-Item -Path D:\publish/* -Destination $publishPath -Recurse
         }
 
