@@ -32,16 +32,16 @@ jobs:
       working-directory: BlogApp.API
 
   deploy:
-    runs-on: self-hosted  # Use a self-hosted runner (assumed to be Windows-based)
+    runs-on: windows-latest  # Use GitHub's Windows runner
     steps:
     - uses: actions/checkout@v4
 
     - name: Deploy to IIS via Web Deploy
       run: |
         echo "Deploying to IIS..."
-        Invoke-Command -ComputerName ${{ secrets.IIS_SERVER }} -Credential (New-Object System.Management.Automation.PSCredential("${{ secrets.IIS_USERNAME }}", (ConvertTo-SecureString ${{ secrets.IIS_PASSWORD }} -AsPlainText -Force))) -ScriptBlock {
-            Import-Module WebAdministration
+        powershell -Command {
             $publishPath = "C:\inetpub\wwwroot\BlogApp"  # Path on the server where the app will be deployed
             Remove-Item -Recurse -Force $publishPath # Remove existing files
             Copy-Item -Path ./publish/* -Destination $publishPath -Recurse
         }
+
