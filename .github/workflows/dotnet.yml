@@ -29,6 +29,11 @@ jobs:
       run: dotnet publish --configuration Release --output ${{ github.workspace }}/publish
       working-directory: BlogApp.API
 
+    - name: Verify publish directory
+      run: |
+        echo "Contents of publish directory:"
+        ls -R ${{ github.workspace }}/publish
+
   deploy:
     runs-on: windows-latest  # Use GitHub's Windows runner
     needs: build  # Ensure this job runs after the build job
