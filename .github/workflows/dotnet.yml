@@ -52,27 +52,27 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: published-app
+        path: ${{ github.workspace }}/published-app
 
-    - name: Print directory contents
-      run: |
-        dir "${{ github.workspace }}\published-app"
+    - name: Verify downloaded files
+      run: dir "${{ github.workspace }}\published-app"
 
     - name: Deploy to IIS via PowerShell
       run: |
         echo "Deploying to IIS..."
         powershell -Command {
             $publishPath = "C:\inetpub\wwwroot\BlogApp"
-            $publishSourcePath = "${env:GITHUB_WORKSPACE}\published-app"  # Adjust path to match downloaded location
-    
+            $publishSourcePath = "${env:GITHUB_WORKSPACE}\published-app"
+
             Write-Host "Publish Source Path: $publishSourcePath"
             Write-Host "Publishing to Path: $publishPath"
-    
+
             if (-Not (Test-Path -Path $publishPath)) {
                 New-Item -Path $publishPath -ItemType Directory
             } else {
                 Remove-Item -Recurse -Force $publishPath\*
             }
-    
+
             if (Test-Path -Path $publishSourcePath) {
                 Get-ChildItem -Path $publishSourcePath | Write-Host
                 Copy-Item -Path "$publishSourcePath\*" -Destination $publishPath -Recurse
@@ -80,4 +80,3 @@ jobs:
                 Write-Error "Publish source path $publishSourcePath does not exist."
             }
         }
-
