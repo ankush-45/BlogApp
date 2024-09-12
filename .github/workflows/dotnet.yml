@@ -34,44 +34,49 @@ jobs:
         echo "Contents of publish directory:"
         ls -R ${{ github.workspace }}/publish
 
+    - name: Upload published files
+      uses: actions/upload-artifact@v3
+      with:
+        name: published-app
+        path: ${{ github.workspace }}/publish
+
   deploy:
-    runs-on: windows-latest  # Use GitHub's Windows runner
-    needs: build  # Ensure this job runs after the build job
+    runs-on: windows-latest
+    needs: build
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: Download published app
+      uses: actions/download-artifact@v3
+      with:
+        name: published-app
+
     - name: Print directory contents
       run: |
-        dir "${{ github.workspace }}\publish"
+        dir "${{ github.workspace }}\published-app"
 
     - name: Deploy to IIS via PowerShell
       run: |
         echo "Deploying to IIS..."
         powershell -Command {
-            $publishPath = "C:\inetpub\wwwroot\BlogApp"  # Path on the server where the app will be deployed
-            $publishSourcePath = "${env:GITHUB_WORKSPACE}\publish"  # Path where the app is published
+            $publishPath = "C:\inetpub\wwwroot\BlogApp"
+            $publishSourcePath = "${env:GITHUB_WORKSPACE}\published-app"
 
-            # Print the contents of the source directory for debugging
             Write-Host "Publish Source Path: $publishSourcePath"
             Write-Host "Publishing to Path: $publishPath"
 
-            # Ensure the target directory exists, if not create it
             if (-Not (Test-Path -Path $publishPath)) {
                 New-Item -Path $publishPath -ItemType Directory
             } else {
-                # If the directory exists, clear existing files
                 Remove-Item -Recurse -Force $publishPath\*
             }
 
-            # Ensure the source directory exists
             if (Test-Path -Path $publishSourcePath) {
-                # Print contents for debugging
                 Get-ChildItem -Path $publishSourcePath | Write-Host
-                # Copy the new published files
                 Copy-Item -Path "$publishSourcePath\*" -Destination $publishPath -Recurse
             } else {
                 Write-Error "Publish source path $publishSourcePath does not exist."
             }
         }
- 
