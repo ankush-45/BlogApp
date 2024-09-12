@@ -62,17 +62,17 @@ jobs:
         echo "Deploying to IIS..."
         powershell -Command {
             $publishPath = "C:\inetpub\wwwroot\BlogApp"
-            $publishSourcePath = "${env:GITHUB_WORKSPACE}\published-app"
-
+            $publishSourcePath = "${env:GITHUB_WORKSPACE}\published-app"  # Adjust path to match downloaded location
+    
             Write-Host "Publish Source Path: $publishSourcePath"
             Write-Host "Publishing to Path: $publishPath"
-
+    
             if (-Not (Test-Path -Path $publishPath)) {
                 New-Item -Path $publishPath -ItemType Directory
             } else {
                 Remove-Item -Recurse -Force $publishPath\*
             }
-
+    
             if (Test-Path -Path $publishSourcePath) {
                 Get-ChildItem -Path $publishSourcePath | Write-Host
                 Copy-Item -Path "$publishSourcePath\*" -Destination $publishPath -Recurse
@@ -80,3 +80,4 @@ jobs:
                 Write-Error "Publish source path $publishSourcePath does not exist."
             }
         }
+
